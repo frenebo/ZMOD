@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.OAuth.Claims;
+// using Microsoft.AspNetCore.Authentication.OAuth.Claims;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +18,7 @@ namespace ZMM.Authorizations.Claims
         /// <summary>
         /// Creates a new CustomClaimAction.
         /// </summary>
-        /// <param name="claimType">The value to use for Claim.Type when creating a Claim.</param>        
+        /// <param name="claimType">The value to use for Claim.Type when creating a Claim.</param>
         /// <param name="valueType">The value to use for Claim.ValueType when creating a Claim.</param>
         /// <param name="jsonKey">The top level key to look for in the json user data.</param>
         /// <param name="jsonKeyDefaultValue">The default value to use if Key is not found.</param>
@@ -34,7 +34,7 @@ namespace ZMM.Authorizations.Claims
         /// </summary>
         public string JsonKey { get; }
         public string DefaultKeyValue { get; }
-        
+
         public override void Run(JObject userData, ClaimsIdentity identity, string issuer)
         {
             try
