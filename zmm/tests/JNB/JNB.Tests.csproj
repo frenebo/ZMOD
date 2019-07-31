@@ -2,7 +2,7 @@
 
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -24,16 +24,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\JNB\JNB.csproj" />
-  </ItemGroup>  
+  </ItemGroup>
 
-  <Target Name="ResolveToolDependenciesForUbuntu" BeforeTargets="Build" Condition=" '$(IsLinux)' == 'true'">    
-    <Message Text="Resolving Tool dependecies (ubuntu)" Importance="high" /> 
-    <Exec Command="cp -r ../../src/JNB/config $(OutputPath)" />     
-    <Exec Command="cp -r ../../src/JNB/config ." />  
+  <Target Name="ResolveToolDependenciesForUbuntu" BeforeTargets="Build" Condition=" '$(IsLinux)' == 'true'">
+    <Message Text="Resolving Tool dependecies (ubuntu)" Importance="high" />
+    <Exec Command="cp -r ../../src/JNB/config $(OutputPath)" />
+    <Exec Command="cp -r ../../src/JNB/config ." />
   </Target>
 
-  <Target Name="ResolveToolDependenciesForWindows" BeforeTargets="Build" Condition=" '$(IsWindows)' == 'true'">    
-    <Message Text="Resolving Tool dependecies (window)" Importance="high" /> 
+  <Target Name="ResolveToolDependenciesForWindows" BeforeTargets="Build" Condition=" '$(IsWindows)' == 'true'">
+    <Message Text="Resolving Tool dependecies (window)" Importance="high" />
     <Exec Command="xcopy ..\..\src\JNB\config $(OutputPath)\config\ /K /D /H /Y" />
     <Exec Command="xcopy ..\..\src\JNB\config config\ /K /D /H /Y" />
   </Target>
