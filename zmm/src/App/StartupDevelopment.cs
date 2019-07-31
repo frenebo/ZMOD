@@ -129,7 +129,7 @@ namespace ZMM.App
                 options.GetClaimsFromUserInfoEndpoint = true;
                 options.SignedOutRedirectUri = Configuration["Authentication:OIDC:SignOutRedirectURL"];
                 options.ResponseType = Configuration["Authentication:OIDC:ResponseType"];
-                options.ClaimActions.Add(new CustomClaimAction("role", "role", "user_roles", "User"));
+                // options.ClaimActions.Add(new CustomClaimAction("role", "role", "user_roles", "User"));
                 options.Events = new OpenIdConnectEvents
                 {
 
