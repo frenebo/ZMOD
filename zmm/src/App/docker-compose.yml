@@ -2,8 +2,8 @@ version: '2.1'
 
 services:
   zmm:
-    volumes: 
-      - ./bin/Debug/netcoreapp2.2/publish/:/app/zmm
+    volumes:
+      - ./bin/Debug/netcoreapp3.0/publish/:/app/zmm
       - ./ZMOD/:/app/ZMOD
     image: zmm
     build: .
